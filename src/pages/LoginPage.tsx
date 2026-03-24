@@ -16,11 +16,11 @@ export default function LoginPage() {
 
     // Simular validación de credenciales
     setTimeout(() => {
-      if (email === "admin@optica.com" && password === "admin123") {
+      if (email === "1234@1234" && password === "1234") {
         // En una app real, aquí guardaríamos el token en localStorage/cookies
         navigate("/dashboard");
       } else {
-        setError("Credenciales incorrectas. Usa admin@optica.com / admin123");
+        setError("Credenciales incorrectas. Usa 1234@1234 / 1234");
         setIsLoading(false);
       }
     }, 1000);
@@ -74,7 +74,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="block w-full pl-10 sm:text-sm border-slate-300 rounded-md h-11 border focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="admin@optica.com"
+                  placeholder="1234@1234"
                 />
               </div>
             </div>

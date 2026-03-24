@@ -7,6 +7,7 @@ export default function NewClient() {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
+    numeroNota: "",
     nombre: "",
     edad: "",
     telefono: "",
@@ -99,15 +100,27 @@ export default function NewClient() {
         {/* Datos Personales */}
         <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
           <h2 className="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-            <User className="w-5 h-5 text-blue-600" /> Datos Personales
+            <User className="w-5 h-5 text-blue-600" /> Datos de la Orden y Cliente
           </h2>
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="sm:col-span-2">
-              <label className="block text-sm font-medium text-slate-700 mb-1">Nombre Completo *</label>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Número de Nota *</label>
               <input
                 required
                 autoFocus
                 tabIndex={1}
+                name="numeroNota"
+                value={formData.numeroNota}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono text-blue-700 font-bold"
+                placeholder="Ej. 001234"
+              />
+            </div>
+            <div className="sm:col-span-2">
+              <label className="block text-sm font-medium text-slate-700 mb-1">Nombre Completo *</label>
+              <input
+                required
+                tabIndex={2}
                 name="nombre"
                 value={formData.nombre}
                 onChange={handleChange}
@@ -119,7 +132,7 @@ export default function NewClient() {
               <label className="block text-sm font-medium text-slate-700 mb-1">Edad</label>
               <input
                 type="number"
-                tabIndex={2}
+                tabIndex={3}
                 name="edad"
                 value={formData.edad}
                 onChange={handleChange}
@@ -133,7 +146,7 @@ export default function NewClient() {
               </label>
               <input
                 type="tel"
-                tabIndex={3}
+                tabIndex={4}
                 name="telefono"
                 value={formData.telefono}
                 onChange={handleChange}
@@ -152,7 +165,7 @@ export default function NewClient() {
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Síntomas / Motivo de consulta</label>
             <textarea
-              tabIndex={4}
+              tabIndex={5}
               name="sintomas"
               value={formData.sintomas}
               onChange={handleChange}
@@ -186,7 +199,7 @@ export default function NewClient() {
                   <td className="py-4 px-4 font-bold text-slate-800 bg-slate-50/50">OD</td>
                   <td className="py-4 px-4">
                     <input
-                      tabIndex={5}
+                      tabIndex={6}
                       name="esferaOD"
                       value={formData.esferaOD}
                       onChange={handleChange}
@@ -196,7 +209,7 @@ export default function NewClient() {
                   </td>
                   <td className="py-4 px-4">
                     <input
-                      tabIndex={6}
+                      tabIndex={7}
                       name="cilindroOD"
                       value={formData.cilindroOD}
                       onChange={handleChange}
@@ -206,7 +219,7 @@ export default function NewClient() {
                   </td>
                   <td className="py-4 px-4">
                     <input
-                      tabIndex={7}
+                      tabIndex={8}
                       name="ejeOD"
                       value={formData.ejeOD}
                       onChange={handleChange}
@@ -216,7 +229,7 @@ export default function NewClient() {
                   </td>
                   <td className="py-4 px-4">
                     <input
-                      tabIndex={8}
+                      tabIndex={9}
                       name="addOD"
                       value={formData.addOD}
                       onChange={handleChange}
@@ -230,7 +243,7 @@ export default function NewClient() {
                   <td className="py-4 px-4 font-bold text-slate-800 bg-slate-50/50">OI</td>
                   <td className="py-4 px-4">
                     <input
-                      tabIndex={9}
+                      tabIndex={10}
                       name="esferaOI"
                       value={formData.esferaOI}
                       onChange={handleChange}
@@ -240,7 +253,7 @@ export default function NewClient() {
                   </td>
                   <td className="py-4 px-4">
                     <input
-                      tabIndex={10}
+                      tabIndex={11}
                       name="cilindroOI"
                       value={formData.cilindroOI}
                       onChange={handleChange}
@@ -250,7 +263,7 @@ export default function NewClient() {
                   </td>
                   <td className="py-4 px-4">
                     <input
-                      tabIndex={11}
+                      tabIndex={12}
                       name="ejeOI"
                       value={formData.ejeOI}
                       onChange={handleChange}
@@ -260,7 +273,7 @@ export default function NewClient() {
                   </td>
                   <td className="py-4 px-4">
                     <input
-                      tabIndex={12}
+                      tabIndex={13}
                       name="addOI"
                       value={formData.addOI}
                       onChange={handleChange}
@@ -279,7 +292,7 @@ export default function NewClient() {
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Notas Adicionales (Internas)</label>
             <textarea
-              tabIndex={13}
+              tabIndex={14}
               name="notas"
               value={formData.notas}
               onChange={handleChange}
@@ -294,14 +307,14 @@ export default function NewClient() {
         <div className="flex items-center justify-end gap-4 pt-4 pb-12">
           <Link
             to="/dashboard"
-            tabIndex={15}
+            tabIndex={16}
             className="px-6 py-2.5 border border-slate-300 text-slate-700 font-medium rounded-full hover:bg-slate-50 transition-colors"
           >
             Cancelar
           </Link>
           <button
             type="submit"
-            tabIndex={14}
+            tabIndex={15}
             disabled={isSubmitting}
             className="inline-flex items-center justify-center px-8 py-2.5 bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold rounded-full hover:from-orange-600 hover:to-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 transition-all shadow-md hover:shadow-lg uppercase tracking-wider min-w-[180px]"
           >

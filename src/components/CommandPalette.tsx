@@ -105,7 +105,7 @@ export default function CommandPalette() {
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             className="flex-1 bg-transparent border-none outline-none text-slate-900 placeholder:text-slate-400 text-lg"
-            placeholder="Buscar por nombre, teléfono o folio (Ej. OPT-2401)..."
+            placeholder="Buscar por nombre, teléfono, folio o nota (Ej. OPT-2401)..."
           />
           {isLoading && <Loader2 className="w-5 h-5 text-slate-400 animate-spin" />}
           <div className="hidden sm:flex items-center gap-1 ml-3">
@@ -140,7 +140,7 @@ export default function CommandPalette() {
                         {item.type === 'client' ? item.nombre : `Orden ${item.folio}`}
                       </div>
                       <div className="text-xs text-slate-500">
-                        {item.type === 'client' ? `${item.folio} • ${item.telefono}` : `Cliente: ${item.clientName} • Estado: ${item.status}`}
+                        {item.type === 'client' ? `${item.folio} ${item.numeroNota ? `• Nota: ${item.numeroNota}` : ''} • ${item.telefono}` : `Cliente: ${item.clientName} • Estado: ${item.status}`}
                       </div>
                     </div>
                   </div>

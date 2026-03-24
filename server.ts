@@ -5,9 +5,9 @@ import { createServer as createViteServer } from "vite";
 
 // Mock Database
 let clients = [
-  { id: "1", folio: "OPT-2401", nombre: "María González", telefono: "(555) 123-4567", edad: 34, fechaRegistro: "2023-10-15" },
-  { id: "2", folio: "OPT-2402", nombre: "Carlos Ruiz", telefono: "(555) 987-6543", edad: 45, fechaRegistro: "2023-10-16" },
-  { id: "3", folio: "OPT-2403", nombre: "Ana López", telefono: "(555) 456-7890", edad: 28, fechaRegistro: "2023-10-17" },
+  { id: "1", folio: "OPT-2401", numeroNota: "001234", nombre: "María González", telefono: "(555) 123-4567", edad: 34, fechaRegistro: "2023-10-15" },
+  { id: "2", folio: "OPT-2402", numeroNota: "001235", nombre: "Carlos Ruiz", telefono: "(555) 987-6543", edad: 45, fechaRegistro: "2023-10-16" },
+  { id: "3", folio: "OPT-2403", numeroNota: "001236", nombre: "Ana López", telefono: "(555) 456-7890", edad: 28, fechaRegistro: "2023-10-17" },
 ];
 
 let orders = [
@@ -49,7 +49,8 @@ async function startServer() {
     const matchedClients = clients.filter(c => 
       c.nombre.toLowerCase().includes(q) || 
       c.telefono.includes(q) || 
-      c.folio.toLowerCase().includes(q)
+      c.folio.toLowerCase().includes(q) ||
+      (c.numeroNota && c.numeroNota.toLowerCase().includes(q))
     ).map(c => ({ type: 'client', ...c }));
 
     const matchedOrders = orders.filter(o => 

@@ -8,6 +8,7 @@ export default function ClientDetail() {
   const client = {
     id,
     folio: "OPT-2401",
+    numeroNota: "001234",
     nombre: "María González",
     edad: 34,
     telefono: "(555) 123-4567",
@@ -37,9 +38,14 @@ export default function ClientDetail() {
           <div>
             <div className="flex items-center gap-3">
               <h1 className="text-2xl font-bold text-slate-900">{client.nombre}</h1>
-              <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 font-mono">
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 font-mono" title="Folio Interno">
                 {client.folio}
               </span>
+              {client.numeroNota && (
+                <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800 font-mono" title="Número de Nota">
+                  Nota: {client.numeroNota}
+                </span>
+              )}
             </div>
             <p className="text-sm text-slate-500 mt-1 flex items-center gap-4">
               <span className="flex items-center gap-1"><User className="w-4 h-4" /> {client.edad} años</span>
