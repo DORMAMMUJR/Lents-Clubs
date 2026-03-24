@@ -13,7 +13,7 @@ export default function LandingPage() {
               className="text-4xl font-['Dancing_Script'] text-white drop-shadow-md tracking-wide"
               style={{ WebkitTextStroke: '1.5px #1d4ed8' }}
             >
-              Óptica Visión
+              Lents Clubs
             </span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
@@ -171,7 +171,7 @@ export default function LandingPage() {
               <div className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl font-['Dancing_Script'] text-white" style={{ WebkitTextStroke: '1px #1d4ed8' }}>
-                    Óptica Visión
+                    Lents Clubs
                   </span>
                 </div>
                 <div className="hidden sm:flex items-center bg-slate-100 rounded-md px-3 py-1.5 w-64">
@@ -245,7 +245,7 @@ export default function LandingPage() {
                   className="text-4xl font-['Dancing_Script'] text-white drop-shadow-md"
                   style={{ WebkitTextStroke: '1px #1d4ed8' }}
                 >
-                  Óptica Visión
+                  Lents Clubs
                 </span>
               </div>
               <h4 className="text-xl font-bold mb-6 text-[#FFD700] uppercase tracking-wider">Contáctanos</h4>
@@ -288,7 +288,7 @@ export default function LandingPage() {
           </div>
           
           <div className="border-t border-slate-800 mt-16 pt-8 text-center text-sm text-slate-500 font-medium">
-            © {new Date().getFullYear()} Óptica Visión. Todos los derechos reservados.
+            © {new Date().getFullYear()} Lents Clubs. Todos los derechos reservados.
           </div>
         </div>
       </footer>

@@ -34,7 +34,7 @@ export default function LoginPage() {
             className="text-5xl font-['Dancing_Script'] text-white drop-shadow-md"
             style={{ WebkitTextStroke: '1.5px #1d4ed8' }}
           >
-            Óptica Visión
+            Lents Clubs
           </span>
         </Link>
         <h2 className="mt-6 text-center text-2xl font-bold tracking-tight text-slate-900">

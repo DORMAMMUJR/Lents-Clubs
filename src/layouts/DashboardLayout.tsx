@@ -36,7 +36,7 @@ export default function DashboardLayout() {
                 className="text-2xl font-['Dancing_Script'] text-white drop-shadow-sm hidden sm:block"
                 style={{ WebkitTextStroke: '1px #1d4ed8' }}
               >
-                Óptica Visión
+                Lents Clubs
               </span>
             </Link>
           </div>
