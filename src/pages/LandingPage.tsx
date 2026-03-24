@@ -256,7 +256,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <p className="font-bold text-lg">Visítanos en:</p>
-                    <p className="text-slate-300 mt-1">Av. Independencia #456, Col. Centro<br />C.P. 12345, Ciudad de México</p>
+                    <p className="text-slate-300 mt-1">Av. Norte no. 145 Local "B",<br />Col. Agrícola Pantitlán</p>
                   </div>
                 </li>
                 <li className="flex items-center gap-4">
@@ -265,7 +265,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <p className="font-bold text-lg">Llámanos:</p>
-                    <p className="text-slate-300 mt-1 text-xl">(55) 1234-5678</p>
+                    <p className="text-slate-300 mt-1 text-xl">55 3431 3615</p>
                   </div>
                 </li>
               </ul>
@@ -275,7 +275,7 @@ export default function LandingPage() {
             <div className="bg-slate-800 rounded-2xl p-2 h-[300px] relative overflow-hidden shadow-2xl border border-slate-700">
               {/* We use an iframe for a generic map view to simulate the real map */}
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661950489228!2d-99.16869368509337!3d19.42702448688756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20Ángel%20de%20la%20Independencia!5e0!3m2!1ses!2smx!4v1650000000000!5m2!1ses!2smx" 
+                src="https://www.google.com/maps?q=Av.+Norte+no.+145+Local+B,+Col.+Agrícola+Pantitlán&output=embed" 
                 className="w-full h-full rounded-xl opacity-80 grayscale contrast-125" 
                 style={{ border: 0 }} 
                 allowFullScreen={false} 
